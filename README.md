@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Budget Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+If you want to control your budget get my app ;)
 
 ## Available Scripts
 
