@@ -8,12 +8,12 @@ body {
   background: #333;
   color: #ddd;
   font-size: 10px;
-  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
 }
 
 button {
   background: rgb(255, 99, 71);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
 
@@ -27,7 +27,7 @@ button {
 }
 
 .Title {
-  font-family: 'Lobster', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Lobster", "Helvetica", "Arial", sans-serif;
   font-size: 3rem;
   font-weight: normal;
   text-decoration: underline;
@@ -59,7 +59,7 @@ button {
   border-bottom: 1px solid #333;
   background: #333;
   margin: 1rem 0;
-  min-width:400px;
+  min-width: 400px;
   // border: 1px solid #fff;
 
   &__container {
@@ -68,30 +68,29 @@ button {
   }
 
   &__header {
-      span {
-        color: rgb(255, 99, 71);
-      }
+    span {
+      color: rgb(255, 99, 71);
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
-    padding: .2rem 0;
+    padding: 0.2rem 0;
     border-bottom: 1px solid #69676a;
   }
 
   button {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
 .total {
   width: 100%;
   text-align: center;
-  padding: .4rem;
+  padding: 0.4rem;
   h2 {
     margin: 0 auto;
-    width: 20%;
     font-size: 1.8rem;
     color: rgb(12, 173, 12);
   }
@@ -110,7 +109,7 @@ button {
   button[type="submit"] {
     width: 100%;
     margin-top: 1rem;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   &__group {
@@ -121,12 +120,12 @@ button {
   input[type="number"],
   select {
     background: #69676a;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: none;
     color: #ddd;
     width: 100%;
     font-size: 1.2rem;
-    padding: .4rem;
+    padding: 0.4rem;
   }
 
   &__select__categories {
