@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, FunctionComponent } from 'react';
 import { useForm } from 'react-hook-form';
-
+import { v4 as uuidv4 } from 'uuid';
 import categories from '../../Data/categories';
 import CategoryOption from '../CategoryOption';
 
-function Form({ addHandle }) {
-	const { register, handleSubmit, errors } = useForm();
+type FormData = {
+	radioType: string;
+	name: string;
+	cash: string;
+	category: string;
+	id: string;
+};
+
+type FormProps = {
+	addHandle: any;
+};
+
+const Form: FunctionComponent<FormProps> = ({ addHandle }) => {
+	const { register, handleSubmit, errors } = useForm<FormData>();
 	const [data, setData] = useState({
 		radioType: '',
 		name: '',
@@ -13,20 +25,19 @@ function Form({ addHandle }) {
 		category: '',
 	});
 
-	const handleRadioType = (e) => {
+	const handleRadioType = (e: any) => {
 		data.radioType = e.target.value;
 		setData({ ...data });
 	};
 
-	const onSubmit = (values, e) => {
-		values.id = Math.random();
-		values.cash = Math.abs(parseFloat(values.cash));
+	const onSubmit = handleSubmit((values, e: any) => {
+		values.id = uuidv4();
 		addHandle(values);
 		e.target.reset();
-	};
+	});
 
 	return (
-		<form className="form" onSubmit={handleSubmit(onSubmit)} noValidate>
+		<form className="form" onSubmit={onSubmit} noValidate>
 			<div className="form__radio">
 				<label htmlFor="radioType">Expense</label>
 				<input
@@ -96,6 +107,6 @@ function Form({ addHandle }) {
 			<button type="submit">ADD</button>
 		</form>
 	);
-}
+};
 
 export default Form;
