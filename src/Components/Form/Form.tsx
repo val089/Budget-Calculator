@@ -13,7 +13,7 @@ type FormData = {
 };
 
 type FormProps = {
-	addHandle: any;
+	addHandle(parameter: object): void;
 };
 
 const Form: FunctionComponent<FormProps> = ({ addHandle }) => {
@@ -25,8 +25,8 @@ const Form: FunctionComponent<FormProps> = ({ addHandle }) => {
 		category: '',
 	});
 
-	const handleRadioType = (e: any) => {
-		data.radioType = e.target.value;
+	const handleRadioType = (e: React.ChangeEvent<HTMLInputElement>): void => {
+		data.radioType = e.currentTarget.value;
 		setData({ ...data });
 	};
 
