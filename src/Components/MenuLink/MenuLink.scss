@@ -1,0 +1,42 @@
+.menu-link {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	&--active {
+		.menu-link__icon,
+		.menu-link__title {
+			color: tomato;
+		}
+	}
+
+	&--active:before {
+		content: '';
+		position: absolute;
+		width: 5px;
+		height: 100%;
+		background: tomato;
+	}
+
+	&--active,
+	&:hover {
+		background: #f1f1f1;
+	}
+
+	&__icon {
+		min-width: 6rem;
+		height: 6rem;
+		display: grid;
+		place-items: center;
+		font-size: 2.4rem;
+		color: #727475;
+	}
+
+	&__title {
+		align-items: center;
+		color: #212529;
+		font-size: 1.6rem;
+		white-space: nowrap;
+	}
+}

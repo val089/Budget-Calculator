@@ -1,14 +1,24 @@
 import React from 'react';
 import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Title from './Components/Title';
+import Menu from './Components/Menu';
 import Calculator from './Components/Calculator';
 
 function App() {
 	return (
 		<div className="App">
-			<Title />
-			<Calculator />
+			<Router>
+				<Menu />
+				<Switch>
+					<Route path="/" exact>
+						{/* <Dashboard /> */}
+					</Route>
+					<Route path="/calculator">
+						<Calculator />
+					</Route>
+				</Switch>
+			</Router>
 		</div>
 	);
 }
